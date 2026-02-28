@@ -1,0 +1,183 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>AI Brain Tumor Detection • Aditya Kumar</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        background: linear-gradient(-45deg, #0f2027, #203a43, #2c5364, #000000);
+        background-size: 400% 400%;
+        animation: gradientMove 15s ease infinite;
+        color: white;
+        font-family: "Segoe UI", sans-serif;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+
+      @keyframes gradientMove {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
+      .container-main {
+        flex: 1;
+      }
+
+      .profile {
+        text-align: center;
+        margin-top: 40px;
+      }
+
+      .profile img {
+        width: 170px;
+        height: 170px;
+        border-radius: 50%;
+        border: 4px solid #00ffd5;
+        box-shadow: 0 0 30px #00ffd5;
+        object-fit: cover;
+      }
+
+      .name {
+        font-size: 2.6rem;
+        font-weight: 700;
+        margin-top: 10px;
+      }
+
+      .tagline {
+        opacity: 0.85;
+      }
+
+      .social a {
+        color: white;
+        margin: 0 15px;
+        font-size: 1.8rem;
+        transition: 0.3s;
+      }
+
+      .social a:hover {
+        color: #00ffd5;
+        transform: scale(1.3);
+      }
+
+      .glass-card {
+        background: rgba(255, 255, 255, 0.08);
+        backdrop-filter: blur(14px);
+        border-radius: 20px;
+        padding: 30px;
+        box-shadow: 0 0 25px rgba(0, 255, 213, 0.3);
+        margin-top: 30px;
+      }
+
+      .btn-glow {
+        background: #00ffd5;
+        border: none;
+        color: black;
+        font-weight: 600;
+        transition: 0.3s;
+      }
+
+      .btn-glow:hover {
+        box-shadow: 0 0 20px #00ffd5;
+        transform: scale(1.03);
+      }
+
+      .result-card {
+        background: white;
+        color: black;
+        border-radius: 15px;
+      }
+
+      footer {
+        background: #00000080;
+        text-align: center;
+        padding: 12px;
+        font-size: 0.9rem;
+      }
+
+      .spinner {
+        display: none;
+        text-align: center;
+        margin-top: 20px;
+      }
+    </style>
+
+    <script>
+      function showLoader() {
+        document.getElementById("spinner").style.display = "block";
+      }
+    </script>
+  </head>
+
+  <body>
+    <div class="container container-main">
+      <div class="profile">
+        <img src="{{ url_for('static', filename='profile.png') }}" />
+
+        <div class="name">MRI Tumor Detection System</div>
+
+        <p class="tagline">Upload an MRI image to detect if there is a tumor and its type.</p>
+
+        
+      </div>
+
+      <div class="glass-card">
+        <form
+          method="POST"
+          enctype="multipart/form-data"
+          onsubmit="showLoader()"
+        >
+          <label class="mb-2">Upload MRI Image</label>
+
+          <input type="file" class="form-control mb-3" name="file" required />
+
+          <button type="submit" class="btn btn-glow w-100">Detect Tumor</button>
+        </form>
+
+        <div id="spinner" class="spinner">
+          <div class="spinner-border text-info"></div>
+          <p>Analyzing with AI...</p>
+        </div>
+      </div>
+
+      {% if result %}
+
+      <div class="result-card mt-4 p-3 shadow">
+        <h4 class="text-success">{{ result }}</h4>
+        <p>Confidence: {{ confidence }}%</p>
+
+        <img src="{{ file_path }}" class="img-fluid rounded" />
+      </div>
+
+      {% endif %}
+    </div>
+    <br />
+
+    <footer>Developed by Aditya Kumar • Final Year Major Project • 2026
+        <div class="social">
+          <a href="https://github.com/adityayadav8294"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/adityakumar82?utm_source=share_via&utm_content=profile&utm_medium=member_android"><i class="fab fa-linkedin"></i></a>
+        </div>
+    </footer>
+  </body>
+</html>
