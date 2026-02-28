@@ -13,7 +13,7 @@ model = None
 def get_model():
     global model
     if model is None:
-        model = load_model('models/model.h5')
+        model = load_model("models/model.h5")
     return model
 
 # Class labels
