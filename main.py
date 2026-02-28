@@ -9,7 +9,13 @@ import download_model
 app = Flask(__name__)
 
 # Load the trained model
-model = load_model('models/model.h5')
+model = None
+
+def get_model():
+    global model
+    if model is None:
+        model = load_model('models/model.h5')
+    return model
 
 # Class labels
 class_labels = ['pituitary', 'glioma', 'notumor', 'meningioma']
@@ -28,6 +34,7 @@ def predict_tumor(image_path):
     img_array = img_to_array(img) / 255.0  # Normalize pixel values
     img_array = np.expand_dims(img_array, axis=0)  # Add batch dimension
 
+    model = get_model()
     predictions = model.predict(img_array)
     predicted_class_index = np.argmax(predictions, axis=1)[0]
     confidence_score = np.max(predictions, axis=1)[0]
