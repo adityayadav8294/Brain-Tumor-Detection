@@ -1,65 +1,72 @@
-# 🧠 Brain Tumor Detection and Classification
+<p align="center">
+  <h1 align="center">🧠 Brain Tumor Detection Web Application</h1>
+  <p align="center">
+    Deep Learning Based MRI Classification System
+  </p>
+</p>
 
-A deep learning-based web application for detecting and classifying brain tumors from MRI images using a Convolutional Neural Network (CNN).
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.10-blue?style=flat-square&logo=python">
+  <img src="https://img.shields.io/badge/TensorFlow-2.x-orange?style=flat-square&logo=tensorflow">
+  <img src="https://img.shields.io/badge/Flask-WebApp-black?style=flat-square&logo=flask">
+  <img src="https://img.shields.io/badge/Deployment-Render-green?style=flat-square">
+</p>
 
 ---
 
 ## 📌 Project Overview
 
-This system allows users to upload MRI brain scan images and receive:
+This project is a deep learning-powered web application that classifies brain MRI images into tumor categories using a Convolutional Neural Network (CNN).
 
-- Tumor type prediction
-- Confidence score
-- Fast web-based inference
-- Clean and responsive interface
+The system enables users to upload MRI scans and receive:
 
-Designed for academic research, medical AI demonstrations, and machine learning portfolio projects.
+- 🧠 Tumor Type Prediction  
+- 📊 Confidence Score  
+- ⚡ Fast Web-Based Inference  
 
 ---
 
 ## 🎯 Classification Categories
 
-The model classifies MRI images into:
-
-- Glioma Tumor
-- Meningioma Tumor
-- Pituitary Tumor
-- No Tumor
+- Glioma Tumor  
+- Meningioma Tumor  
+- Pituitary Tumor  
+- No Tumor  
 
 ---
 
-## 🛠 Tech Stack
+## 🏗 Tech Stack
 
-### Backend
-- Python 3.10
-- Flask
-- Gunicorn
-- TensorFlow (Keras)
-- NumPy
-- h5py
-- Pillow
+### 🔹 Backend
+- Python 3.10  
+- Flask  
+- Gunicorn  
+- TensorFlow (Keras API)  
+- NumPy  
+- h5py  
+- Pillow  
 
-### Frontend
-- HTML5
-- CSS3
-- Bootstrap
-- Jinja2 Templates
+### 🔹 Frontend
+- HTML5  
+- CSS3  
+- Bootstrap  
+- Jinja2  
 
-### Deployment
-- Render (Cloud Hosting)
-- Git & GitHub
+### 🔹 Deployment
+- Render  
+- GitHub  
 
 ---
 
 ## 🧠 Model Details
 
-- Model Type: Convolutional Neural Network (CNN)
-- Framework: TensorFlow / Keras
-- Model Format: `.h5`
-- Input Size: 128x128 pixels
-- Image Normalization: Pixel scaling (0–1 range)
-- Output Layer: Softmax activation
-- Prediction Method: `argmax()` classification
+- Architecture: Convolutional Neural Network (CNN)  
+- Framework: TensorFlow / Keras  
+- Model Format: `.h5`  
+- Input Size: 128x128 pixels  
+- Normalization: Pixel values scaled to 0–1  
+- Output Layer: Softmax Activation  
+- Prediction Logic: `argmax()` classification  
 
 ---
 
@@ -82,35 +89,35 @@ Brain-Tumor-Detection/
 
 ---
 
-## ⚙ Installation
+## ⚙️ Installation Guide
 
-### 1️⃣ Clone the repository
+### 1️⃣ Clone Repository
 
 ```
-git clone https://github.com/your-username/Brain-Tumor-Detection.git
+git clone https://github.com/adityayadav8294/Brain-Tumor-Detection.git
 cd Brain-Tumor-Detection
 ```
 
-### 2️⃣ Create virtual environment
+### 2️⃣ Create Virtual Environment
 
 ```
 python -m venv venv
 venv\Scripts\activate
 ```
 
-### 3️⃣ Install dependencies
+### 3️⃣ Install Dependencies
 
 ```
 pip install -r requirements.txt
 ```
 
-### 4️⃣ Run the application
+### 4️⃣ Run Application
 
 ```
 python main.py
 ```
 
-Application will run at:
+Application runs on:
 
 ```
 http://127.0.0.1:5000/
@@ -118,9 +125,9 @@ http://127.0.0.1:5000/
 
 ---
 
-## 🌐 Deployment Configuration
+## 🌐 Production Deployment
 
-The project is configured for production using:
+Configured using:
 
 ```
 gunicorn main:app --workers 1 --threads 1 --timeout 300
@@ -132,7 +139,7 @@ gunicorn main:app --workers 1 --threads 1 --timeout 300
 
 ### 🖥 Upload Interface
 
-(Add screenshot inside `static/images/home.png`)
+> Save screenshot inside: `static/images/home.png`
 
 ```
 ![Upload Page](static/images/home.png)
@@ -142,7 +149,7 @@ gunicorn main:app --workers 1 --threads 1 --timeout 300
 
 ### 🔍 Prediction Output
 
-(Add screenshot inside `static/images/output.png`)
+> Save screenshot inside: `static/images/output.png`
 
 ```
 ![Prediction Output](static/images/output.png)
@@ -152,26 +159,32 @@ gunicorn main:app --workers 1 --threads 1 --timeout 300
 
 ## 🚀 Key Features
 
-- Clean UI design
-- Real-time tumor classification
-- Confidence score display
-- Production-ready deployment setup
-- Structured and modular project architecture
+- Clean and responsive UI  
+- Real-time tumor classification  
+- Confidence score display  
+- Structured modular architecture  
+- Production-ready configuration  
 
 ---
 
 ## 📈 Future Improvements
 
-- Model optimization (TensorFlow Lite)
-- Docker containerization
-- REST API version
-- Accuracy enhancement with larger dataset
+- TensorFlow Lite optimization  
+- Docker support  
+- REST API version  
+- Model accuracy improvement  
 
 ---
 
 ## 👨‍💻 Author
 
-Aditya Kumar  
+**Aditya Kumar**
 
-Portfolio: https://aditya82.netlify.app/  
-Email: adityasingh829442@gmail.com
+🌐 Portfolio: https://aditya82.netlify.app/  
+📧 Email: adityasingh829442@gmail.com  
+
+---
+
+<p align="center">
+  ⭐ If you found this project useful, consider giving it a star!
+</p>
