@@ -153,20 +153,13 @@ Overall Average Accuracy: ~97-98%
 
 ### 🖥 Upload Interface
 
-> Save screenshot inside: `static/home.png`
-
-```
-![Upload Page](static/home.png)
-```
+![Upload Page](./static/home.png)
 
 ---
 
 ### 🔍 Prediction Output
 
-> Save screenshot inside: `static/output.png`
-
-```
-![Prediction Output](static/output.png)
+![Prediction Output](./static/output.png)
 ```
 
 ---
