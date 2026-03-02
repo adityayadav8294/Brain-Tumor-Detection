@@ -135,24 +135,38 @@ gunicorn main:app --workers 1 --threads 1 --timeout 300
 
 ---
 
+
+## 📊 Model Performance
+
+The trained CNN model achieved the following accuracy:
+
+- Glioma: 99-100%
+- Meningioma: 93-94%
+- Pituitary: 98-99%
+- No Tumor: 97-98%
+
+Overall Average Accuracy: ~97-98%
+
+---
+
 ## 📸 Application Preview
 
 ### 🖥 Upload Interface
 
-> Save screenshot inside: `static/images/home.png`
+> Save screenshot inside: `static/home.png`
 
 ```
-![Upload Page](static/images/home.png)
+![Upload Page](static/home.png)
 ```
 
 ---
 
 ### 🔍 Prediction Output
 
-> Save screenshot inside: `static/images/output.png`
+> Save screenshot inside: `static/output.png`
 
 ```
-![Prediction Output](static/images/output.png)
+![Prediction Output](static/output.png)
 ```
 
 ---
