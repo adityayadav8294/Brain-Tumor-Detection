@@ -160,7 +160,6 @@ Overall Average Accuracy: ~97-98%
 ### 🔍 Prediction Output
 
 ![Prediction Output](./static/output.png)
-```
 
 ---
 
